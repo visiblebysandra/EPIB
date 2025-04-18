@@ -71,7 +71,6 @@
     .card:nth-child(7) { background-color: #cd77f2; }
     .card:nth-child(8) { background-color: #e4e9f2; color: #333; }
     .card:nth-child(9) { background-color: #f2cea2; color: #333; }
-    .card:nth-child(10) { background-color: #f263c0; }
     .category-section {
       display: none;
       padding: 1rem;
@@ -114,29 +113,103 @@
       <div class="card" onclick="showCategory('education')">🎓<br>Education</div>
       <div class="card" onclick="showCategory('transport')">🚗<br>Transportation</div>
       <div class="card" onclick="showCategory('home')">🧹<br>Home Services</div>
+      <div class="card" onclick="showCategory('style')">👗<br>Style & Tailoring</div>
       <div class="card" onclick="showCategory('pets')">🐾<br>Pets & Vets</div>
       <div class="card" onclick="showCategory('realestate')">🏡<br>Real Estate</div>
       <div class="card" onclick="showCategory('food')">🛒<br>Food & Markets</div>
-      <div class="card" onclick="showCategory('activities')">🎉<br>Kids Activities</div>
       <div class="card" onclick="showCategory('tech')">💻<br>Tech & Repairs</div>
-      <div class="card" onclick="showCategory('style')">👗<br>Style & Tailoring</div>
+      <div class="card" onclick="showCategory('kids')">🎉<br>Kids Activities</div>
     </main>
 
-    <div id="pets" class="category-section">
-      <h2>🐾 Pets & Vets</h2>
-      <div class="entry"><strong>Atypical Pets</strong><br>Exotic vet, especially for rabbits<br>📞 +57 316 3657913</div>
-      <div class="entry"><strong>Happy Pets (Kennel & Vet)</strong><br>English-speaking kennel and veterinary service<br>📞 +57 315 2584048</div>
-      <div class="entry"><strong>Laika Vet (Mobile)</strong><br>Mobile vaccination & grooming app<br>🌐 www.laika.com.co</div>
-      <div class="entry"><strong>Vet Integral El Country</strong><br>Emergency services 24/7<br>📞 +57 310 2577730</div>
+    <div id="health" class="category-section">
+      <h2>🏥 Health & Medical</h2>
+      <div class="entry"><strong>Dr. Bernardo Huertas</strong><br>Pediatrician trusted by expat families<br>📍 Bogotá<br>📞 +57 310 2288934</div>
+      <div class="entry"><strong>Mamuelas Kids</strong><br>Pediatric dentist, very friendly, some English<br>📍 Bogotá<br>📞 +57 322 7672488</div>
+      <div class="entry"><strong>Dra. Johana Rojas</strong><br>Pediatric dermatologist, recommended locally<br>📍 Bogotá<br>📞 +57 310 2782941</div>
+      <div class="entry"><strong>Dra. Vanessa Jimenez</strong><br>Dermatologist recommended by expats<br>📍 Bogotá<br>📞 +57 300 2028982</div>
+      <div class="entry"><strong>ICare Bogotá</strong><br>Pediatric home visits, English-speaking<br>📍 Citywide<br>📞 +57 310 5316996</div>
+      <div class="entry"><strong>Dra. Viviana Perico</strong><br>Cosmetic dermatologist (94 & 11th)<br>📍 Bogotá<br>📞 +57 314 8811993</div>
+      <div class="entry"><strong>Vanessa Gonzalez</strong><br>Dermatologist shared by group member<br>📍 Bogotá<br>📞 +57 300 7387730</div>
+      <div class="entry"><strong>Consultorio Dental Bogotá</strong><br>English-speaking dentist in Chapinero<br>📍 Chapinero<br>📞 (601) 2130290</div>
+      <div class="entry"><strong>Dra. Ana Ma Salazar</strong><br>Dermatologist for kids in Cedritos<br>📍 Cedritos<br>📞 +57 320 4314752</div>
+      <div class="entry"><strong>Pediahome</strong><br>Pediatric home care (evenings)<br>📍 Bogotá<br>📞 +57 320 3122725</div>
+      <div class="entry"><strong>Dr. Juan José Duque Ramírez</strong><br>Endocrinologist & Internist (Doctoralia)<br>📍 Bogotá<br>🔗 <a href=\"https://www.doctoralia.co/juan-jose-duque-ramirez/endocrinologo-internista/bogota\">View Profile</a></div>
+      <div class="entry"><strong>Dr. Sergio Prieto</strong><br>General doctor for adults, house calls, fluent English<br>📍 Bogotá<br>📞 +57 321 4083791</div>
+      <div class="entry"><strong>Dr. Luis Jorge Mejía</strong><br>Pediatric ENT (Clínica Country)<br>📍 Bogotá<br>📞 +57 310 6746577</div>
+      <div class="entry"><strong>Dra. Diana Quijano</strong><br>ENT specialist (Clínica Santa Fe)<br>📍 Bogotá<br>📞 +57 310 8734966 / +57 1 6200474</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+        <div id="education" class="category-section">
+      <h2>🎓 Education</h2>
+      <div class="entry"><strong>Arte Vibrante</strong><br>Art classes for kids – creative & bilingual<br>🌐 www.artevibrante.org</div>
+      <div class="entry"><strong>Ukelele Fiestas</strong><br>Also offers interactive creative workshops for children<br>📞 +57 313 3333635</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <div id="transport" class="category-section">
+      <h2>🚗 Transportation</h2>
+      <div class="entry"><strong>Yecid Gomez</strong><br>Reliable driver, Spanish only<br>📞 +57 312 5787275</div>
+      <div class="entry"><strong>Edgar Sabogal</strong><br>Car rental and airport drop-off<br>📞 +57 321 2279895</div>
+      <div class="entry"><strong>Juan Carlos Sarmiento</strong><br>Driver used by Pilar C. – reliable<br>📞 +57 317 3745561</div>
+      <div class="entry"><strong>Aldo Transporte</strong><br>Private transport to Málaga/Boyacá<br>📞 +57 304 2474406</div>
+      <div class="entry"><strong>Juan (Uber)</strong><br>Well-known trusted driver<br>📞 +57 311 4968358</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <div id="home" class="category-section">
+      <h2>🧹 Home Services</h2>
+      <div class="entry"><strong>Maria Eugenia Sanchez</strong><br>Trusted maid for childcare + cleaning<br>📞 +57 322 8217161</div>
+      <div class="entry"><strong>Referral Network</strong><br>Many families posted housekeeper/caregiver recommendations (see chat)</div>
       <button class="back-btn" onclick="goBack()">← Back</button>
     </div>
 
     <div id="style" class="category-section">
       <h2>👗 Style & Tailoring</h2>
-      <div class="entry"><strong>Lea Raymond Couturiere</strong><br>Custom dressmaking and alterations<br>📞 +57 305 2922099</div>
+      <div class="entry"><strong>Lea Raymond Couturiere</strong><br>Custom dressmaking, French-speaking<br>📞 +57 305 2922099</div>
       <button class="back-btn" onclick="goBack()">← Back</button>
     </div>
-  </div>
+
+    <div id="pets" class="category-section">
+      <h2>🐾 Pets & Vets</h2>
+      <div class="entry"><strong>Atypical Pets</strong><br>Vet for exotic pets (North Bogotá)</div>
+      <div class="entry"><strong>Laika</strong><br>Vet clinics, grooming & pet store chain<br>🌐 App: Laika (Colombia)</div>
+      <div class="entry"><strong>TuVet</strong><br>Mobile veterinary care<br>🌐 www.tuvet.co</div>
+      <div class="entry"><strong>Centro Médico Veterinario Cedritos</strong><br>Full-service hospital<br>📞 +57 1 625 5453</div>
+      <div class="entry"><strong>Grooming Pelitos</strong><br>Pet grooming recommended by families</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+        <div id="realestate" class="category-section">
+      <h2>🏡 Real Estate</h2>
+      <div class="entry"><strong>Carlos Gonzalez IMMO</strong><br>Works with embassies and expats<br>📞 +57 310 3362045</div>
+      <div class="entry"><strong>Rapha Garing</strong><br>Luxury properties, speaks French & Spanish<br>📞 +57 310 2746388</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <div id="food" class="category-section">
+      <h2>🛒 Food & Markets</h2>
+      <div class="entry"><strong>Carulla</strong><br>Upscale grocery chain (online delivery available)</div>
+      <div class="entry"><strong>Expat Favorite Bakeries</strong><br>Chat recommends several artisan bakeries for sourdough, baguettes</div>
+      <div class="entry"><strong>Marketplace at 93 Park</strong><br>Weekend organic market (check timing)</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <div id="tech" class="category-section">
+      <h2>💻 Tech & Repairs</h2>
+      <div class="entry"><strong>Miguel</strong><br>Robotics, programming, physics lessons for kids<br>📞 +7 999 099-31-81</div>
+      <div class="entry"><strong>Encrypt Gallery</strong><br>Fast and reliable phone repair<br>📞 +57 316 6468081</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <div id="kids" class="category-section">
+      <h2>🎉 Kids Activities</h2>
+      <div class="entry"><strong>Cinemania</strong><br>Weekend kid-friendly cinema with snacks<br>📍 Carrera 14, Calle 93b</div>
+      <div class="entry"><strong>Plaza Claro Cinema</strong><br>Indoor games + short intermissions</div>
+      <div class="entry"><strong>Diversaltos Lina Arias</strong><br>Inflatables for birthdays & events<br>📞 +57 318 7080689</div>
+      <div class="entry"><strong>Ukelele Fiestas Bogotá</strong><br>Creative party entertainment<br>📞 +57 313 3333635</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+  </div> <!-- Close app-wrapper -->
 
   <script>
     function showCategory(id) {
@@ -152,3 +225,5 @@
   </script>
 </body>
 </html>
+
+
