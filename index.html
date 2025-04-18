@@ -60,6 +60,7 @@
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
       color: white;
       font-weight: bold;
+      cursor: pointer;
     }
     .card a {
       text-decoration: none;
@@ -77,6 +78,34 @@
     .card:nth-child(7) { background-color: #cd77f2; }
     .card:nth-child(8) { background-color: #e4e9f2; color: #333; }
     .card:nth-child(9) { background-color: #f2cea2; color: #333; }
+    .category-section {
+      display: none;
+      padding: 1rem;
+    }
+    .category-section.active {
+      display: block;
+    }
+    .entry {
+      background: #f9f9f9;
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .entry strong {
+      font-size: 1rem;
+    }
+    .back-btn {
+      display: block;
+      margin: 1rem auto;
+      padding: 0.5rem 1rem;
+      background-color: #cd77f2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -86,43 +115,43 @@
       <h1>Expat Parents in Bogotá</h1>
       <p>Tap a category to explore resources</p>
     </header>
-    <main>
-      <div class="card"><a href="#health">🏥<br>Health & Medical</a></div>
-      <div class="card"><a href="#education">🎓<br>Education</a></div>
-      <div class="card"><a href="#transport">🚗<br>Transportation</a></div>
-      <div class="card"><a href="#home">🧹<br>Home Services</a></div>
-      <div class="card"><a href="#pets">🐾<br>Pets & Vets</a></div>
-      <div class="card"><a href="#realestate">🏡<br>Real Estate</a></div>
-      <div class="card"><a href="#food">🛒<br>Food & Markets</a></div>
-      <div class="card"><a href="#activities">🎉<br>Kids Activities</a></div>
-      <div class="card"><a href="#tech">💻<br>Tech & Repairs</a></div>
+    <main id="mainMenu">
+      <div class="card" onclick="showCategory('health')">🏥<br>Health & Medical</div>
+      <div class="card" onclick="showCategory('education')">🎓<br>Education</div>
+      <div class="card" onclick="showCategory('transport')">🚗<br>Transportation</div>
+      <div class="card" onclick="showCategory('home')">🧹<br>Home Services</div>
+      <div class="card" onclick="showCategory('pets')">🐾<br>Pets & Vets</div>
+      <div class="card" onclick="showCategory('realestate')">🏡<br>Real Estate</div>
+      <div class="card" onclick="showCategory('food')">🛒<br>Food & Markets</div>
+      <div class="card" onclick="showCategory('activities')">🎉<br>Kids Activities</div>
+      <div class="card" onclick="showCategory('tech')">💻<br>Tech & Repairs</div>
     </main>
-    <section id="health" style="padding: 2rem 1rem; background-color: #f9f9f9;">
-  <h2 style="text-align:center; color: #cd77f2;">🏥 Health & Medical</h2>
-  <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
-    <div style="background:#fff; padding:1rem; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.05);">
-      <strong>Dra. Viviana Perico</strong><br>
-      Cosmetic Dermatologist (English-speaking)<br>
-      📍 94th & 11th<br>
-      📞 +1 (718) 503-1919
+
+    <div id="health" class="category-section">
+      <h2>🏥 Health & Medical</h2>
+      <div class="entry"><strong>Dra. Viviana Perico</strong><br>Cosmetic dermatologist - 94 & 11th<br>📞 +1 (718) 503-1919</div>
+      <div class="entry"><strong>Mamuelas Kids</strong><br>Friendly dentist, speaks a little English<br>📞 +57 322 7672488</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
     </div>
 
-    <div style="background:#fff; padding:1rem; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.05);">
-      <strong>Dra. Marcela Sekretwr Patricia Ladino</strong><br>
-      Kids Dentist in Parque de la 93<br>
-      📞 +57 317 6373568
+    <div id="education" class="category-section">
+      <h2>🎓 Education</h2>
+      <div class="entry"><strong>ARTE VIBRANTE</strong><br>Art classes for kids<br>🌐 www.artevibrante.org</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
     </div>
-
-    <div style="background:#fff; padding:1rem; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.05);">
-      <strong>Dra. María Cabal</strong><br>
-      Pediatric Dentist (English & Spanish)<br>
-      📞 +57 317 6667705
-    </div>
-
-    <!-- You can keep adding more entries here -->
   </div>
-</section>
 
-  </div>
+  <script>
+    function showCategory(id) {
+      document.getElementById('mainMenu').style.display = 'none';
+      document.querySelectorAll('.category-section').forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function goBack() {
+      document.querySelectorAll('.category-section').forEach(section => section.classList.remove('active'));
+      document.getElementById('mainMenu').style.display = 'grid';
+    }
+  </script>
 </body>
 </html>
