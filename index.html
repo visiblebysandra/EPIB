@@ -17,28 +17,27 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-      border-radius: 12px;
       background-color: white;
-      overflow: hidden;
+      border-radius: 0;
     }
     header {
+      width: 100%;
       background: linear-gradient(to right, #f263c0, #cd77f2);
       color: white;
-      padding: 1rem 1rem 2rem;
+      padding: 2rem 1rem;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
     header img {
       width: 100px;
       border-radius: 50%;
       border: 3px solid white;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
     header h1 {
       margin: 0.5rem 0 0.25rem;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
     header p {
       margin: 0;
@@ -46,21 +45,21 @@
       opacity: 0.9;
     }
     main {
-      padding: 1rem;
+      padding: 1rem 0.75rem;
       display: grid;
       grid-template-columns: 1fr;
-      gap: 0.75rem;
+      gap: 1rem;
       width: 100%;
-      background-color: #e4e9f2;
+      background-color: white;
     }
     .card {
-      background-color: white;
-      border-left: 6px solid #f2541b;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       padding: 1rem;
       text-align: center;
       transition: transform 0.2s;
+      border-left: 6px solid #f2541b;
     }
     .card:hover {
       transform: scale(1.02);
@@ -69,6 +68,7 @@
       text-decoration: none;
       color: #cd77f2;
       font-weight: bold;
+      font-size: 1rem;
     }
   </style>
 </head>
