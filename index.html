@@ -26,6 +26,7 @@
       padding: 2rem 1rem 1.5rem;
       text-align: center;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+      border-radius: 0 0 20px 20px;
     }
     header img {
       width: 90px;
@@ -52,24 +53,30 @@
       flex-grow: 1;
     }
     .card {
-      background-color: white;
       border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       padding: 1rem;
       text-align: center;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border: 1px solid #eee;
-    }
-    .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      color: white;
+      font-weight: bold;
     }
     .card a {
       text-decoration: none;
-      color: #cd77f2;
       font-weight: 600;
       font-size: 0.95rem;
+      display: block;
+      color: inherit;
     }
+    .card:nth-child(1) { background-color: #f263c0; }
+    .card:nth-child(2) { background-color: #cd77f2; }
+    .card:nth-child(3) { background-color: #e4e9f2; color: #333; }
+    .card:nth-child(4) { background-color: #f2cea2; color: #333; }
+    .card:nth-child(5) { background-color: #f2541b; }
+    .card:nth-child(6) { background-color: #f263c0; }
+    .card:nth-child(7) { background-color: #cd77f2; }
+    .card:nth-child(8) { background-color: #e4e9f2; color: #333; }
+    .card:nth-child(9) { background-color: #f2cea2; color: #333; }
   </style>
 </head>
 <body>
