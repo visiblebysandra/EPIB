@@ -122,24 +122,53 @@
       <div class="card" onclick="showCategory('kids')">🎉<br>Kids Activities</div>
     </main>
 
-    <div id="health" class="category-section">
-      <h2>🏥 Health & Medical</h2>
-      <div class="entry"><strong>Dr. Bernardo Huertas</strong><br>Pediatrician trusted by expat families<br>📍 Bogotá<br>📞 +57 310 2288934</div>
-      <div class="entry"><strong>Mamuelas Kids</strong><br>Pediatric dentist, very friendly, some English<br>📍 Bogotá<br>📞 +57 322 7672488</div>
-      <div class="entry"><strong>Dra. Johana Rojas</strong><br>Pediatric dermatologist, recommended locally<br>📍 Bogotá<br>📞 +57 310 2782941</div>
-      <div class="entry"><strong>Dra. Vanessa Jimenez</strong><br>Dermatologist recommended by expats<br>📍 Bogotá<br>📞 +57 300 2028982</div>
-      <div class="entry"><strong>ICare Bogotá</strong><br>Pediatric home visits, English-speaking<br>📍 Citywide<br>📞 +57 310 5316996</div>
-      <div class="entry"><strong>Dra. Viviana Perico</strong><br>Cosmetic dermatologist (94 & 11th)<br>📍 Bogotá<br>📞 +57 314 8811993</div>
-      <div class="entry"><strong>Vanessa Gonzalez</strong><br>Dermatologist shared by group member<br>📍 Bogotá<br>📞 +57 300 7387730</div>
-      <div class="entry"><strong>Consultorio Dental Bogotá</strong><br>English-speaking dentist in Chapinero<br>📍 Chapinero<br>📞 (601) 2130290</div>
-      <div class="entry"><strong>Dra. Ana Ma Salazar</strong><br>Dermatologist for kids in Cedritos<br>📍 Cedritos<br>📞 +57 320 4314752</div>
-      <div class="entry"><strong>Pediahome</strong><br>Pediatric home care (evenings)<br>📍 Bogotá<br>📞 +57 320 3122725</div>
-      <div class="entry"><strong>Dr. Juan José Duque Ramírez</strong><br>Endocrinologist & Internist (Doctoralia)<br>📍 Bogotá<br>🔗 <a href=\"https://www.doctoralia.co/juan-jose-duque-ramirez/endocrinologo-internista/bogota\">View Profile</a></div>
-      <div class="entry"><strong>Dr. Sergio Prieto</strong><br>General doctor for adults, house calls, fluent English<br>📍 Bogotá<br>📞 +57 321 4083791</div>
-      <div class="entry"><strong>Dr. Luis Jorge Mejía</strong><br>Pediatric ENT (Clínica Country)<br>📍 Bogotá<br>📞 +57 310 6746577</div>
-      <div class="entry"><strong>Dra. Diana Quijano</strong><br>ENT specialist (Clínica Santa Fe)<br>📍 Bogotá<br>📞 +57 310 8734966 / +57 1 6200474</div>
-      <button class="back-btn" onclick="goBack()">← Back</button>
-    </div>
+<div id="health" class="category-section">
+  <h2>🏥 Health & Medical</h2>
+
+  <label for="doctorFilter"><strong>Filter by Type of Doctor:</strong></label>
+  <select id="doctorFilter" onchange="filterDoctors()">
+    <option value="all">All</option>
+    <option value="pediatrician">Pediatrician</option>
+    <option value="dentist">Dentist</option>
+    <option value="dermatologist">Dermatologist</option>
+    <option value="ent">ENT</option>
+    <option value="general">General Doctor</option>
+    <option value="homecare">Home Care</option>
+    <option value="endocrinologist">Endocrinologist</option>
+  </select>
+
+  <div class="entry pediatrician"><strong>Dr. Bernardo Huertas</strong><br>Pediatrician trusted by expat families<br>📍 Bogotá<br>📞 +57 310 2288934</div>
+  <div class="entry dentist"><strong>Mamuelas Kids</strong><br>Pediatric dentist, very friendly, some English<br>📍 Bogotá<br>📞 +57 322 7672488</div>
+  <div class="entry dermatologist"><strong>Dra. Johana Rojas</strong><br>Pediatric dermatologist, recommended locally<br>📍 Bogotá<br>📞 +57 310 2782941</div>
+  <div class="entry dermatologist"><strong>Dra. Vanessa Jimenez</strong><br>Dermatologist recommended by expats<br>📍 Bogotá<br>📞 +57 300 2028982</div>
+  <div class="entry homecare"><strong>ICare Bogotá</strong><br>Pediatric home visits, English-speaking<br>📍 Citywide<br>📞 +57 310 5316996</div>
+  <div class="entry dermatologist"><strong>Dra. Viviana Perico</strong><br>Cosmetic dermatologist (94 & 11th)<br>📍 Bogotá<br>📞 +57 314 8811993</div>
+  <div class="entry dermatologist"><strong>Vanessa Gonzalez</strong><br>Dermatologist shared by group member<br>📍 Bogotá<br>📞 +57 300 7387730</div>
+  <div class="entry dentist"><strong>Consultorio Dental Bogotá</strong><br>English-speaking dentist in Chapinero<br>📍 Chapinero<br>📞 (601) 2130290</div>
+  <div class="entry dermatologist"><strong>Dra. Ana Ma Salazar</strong><br>Dermatologist for kids in Cedritos<br>📍 Cedritos<br>📞 +57 320 4314752</div>
+  <div class="entry homecare"><strong>Pediahome</strong><br>Pediatric home care (evenings)<br>📍 Bogotá<br>📞 +57 320 3122725</div>
+  <div class="entry endocrinologist"><strong>Dr. Juan José Duque Ramírez</strong><br>Endocrinologist & Internist (Doctoralia)<br>📍 Bogotá<br>🔗 <a href="https://www.doctoralia.co/juan-jose-duque-ramirez/endocrinologo-internista/bogota" target="_blank">View Profile</a></div>
+  <div class="entry general"><strong>Dr. Sergio Prieto</strong><br>General doctor for adults, house calls, fluent English<br>📍 Bogotá<br>📞 +57 321 4083791</div>
+  <div class="entry ent"><strong>Dr. Luis Jorge Mejía</strong><br>Pediatric ENT (Clínica Country)<br>📍 Bogotá<br>📞 +57 310 6746577</div>
+  <div class="entry ent"><strong>Dra. Diana Quijano</strong><br>ENT specialist (Clínica Santa Fe)<br>📍 Bogotá<br>📞 +57 310 8734966 / +57 1 6200474</div>
+
+  <button class="back-btn" onclick="goBack()">← Back</button>
+</div>
+
+<script>
+  function filterDoctors() {
+    const selected = document.getElementById('doctorFilter').value;
+    const entries = document.querySelectorAll('#health .entry');
+    entries.forEach(entry => {
+      if (selected === 'all') {
+        entry.style.display = 'block';
+      } else {
+        entry.style.display = entry.classList.contains(selected) ? 'block' : 'none';
+      }
+    });
+  }
+</script>
+
     
         <div id="education" class="category-section">
       <h2>🎓 Education</h2>
