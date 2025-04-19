@@ -11,7 +11,15 @@
       margin: 0;
       padding: 0;
     }
-     header {
+    .app-wrapper {
+      max-width: 420px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    header {
       background: linear-gradient(to right, #f263c0, #cd77f2);
       color: white;
       padding: 2rem 1rem 1.5rem;
@@ -37,6 +45,45 @@
       margin: 0;
       font-size: 0.95rem;
       opacity: 0.9;
+    }
+
+    .admin-bar-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-bottom: 1px solid #eee;
+    }
+
+    .admin-bar {
+      width: 100%;
+      max-width: 420px;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      background: #ffffff;
+    }
+
+    .admin-bar button {
+      flex: 1;
+      margin: 0 0.25rem;
+      border: none;
+      background: #cd77f2;
+      color: white;
+      font-weight: bold;
+      padding: 0.6rem 0.5rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      transition: background 0.2s ease;
+    }
+
+    .admin-bar button:hover {
+      background: #b65de0;
     }
 
     main {
@@ -90,7 +137,7 @@
       font-size: 1rem;
     }
 
-    .back-btn {
+    .back-btn, .top-back-btn {
       display: block;
       margin: 1rem auto;
       padding: 0.5rem 1rem;
@@ -100,102 +147,55 @@
       border-radius: 8px;
       font-size: 1rem;
       cursor: pointer;
+      text-align: center;
     }
 
-  .footer-nav-wrapper {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  z-index: 100;
-  background-color: transparent;
-}
-
-.footer-nav {
-  background-color: #ffffff;
-  width: 100%;
-  max-width: 420px;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
-  padding: 0.5rem 0.75rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 15px 15px 0 0;
-  box-sizing: border-box;
-}
-
-.footer-nav button {
-  flex: 1;
-  margin: 0 0.25rem;
-  border: none;
-  background: #cd77f2;
-  color: white;
-  font-weight: bold;
-  padding: 0.6rem 0.5rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 0.85rem;
-  transition: background 0.2s ease;
-  white-space: nowrap;
-}
-
-.footer-nav button:hover {
-  background: #b65de0;
-}
-   
     .top-back-btn {
-      display: block;
-      margin-bottom: 1rem;
-      padding: 0.4rem 0.9rem;
-      background-color: #cd77f2;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      cursor: pointer;
+      margin: 1rem 0;
       width: fit-content;
     }
-    
-.admin-bar-wrapper {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  border-bottom: 1px solid #eee;
-}
 
-.admin-bar {
-  width: 100%;
-  max-width: 420px;
-  padding: 0.5rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  background: #ffffff;
-}
+    .footer-nav-wrapper {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      z-index: 100;
+      background-color: transparent;
+    }
 
-.admin-bar button {
-  flex: 1;
-  margin: 0 0.25rem;
-  border: none;
-  background: #cd77f2;
-  color: white;
-  font-weight: bold;
-  padding: 0.6rem 0.5rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  transition: background 0.2s ease;
-}
+    .footer-nav {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+      padding: 0.5rem 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 15px 15px 0 0;
+      box-sizing: border-box;
+    }
 
-.admin-bar button:hover {
-  background: #b65de0;
-}
+    .footer-nav button {
+      flex: 1;
+      margin: 0 0.25rem;
+      border: none;
+      background: #cd77f2;
+      color: white;
+      font-weight: bold;
+      padding: 0.6rem 0.5rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background 0.2s ease;
+      white-space: nowrap;
+    }
 
+    .footer-nav button:hover {
+      background: #b65de0;
+    }
   </style>
 </head>
 <body>
