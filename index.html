@@ -115,46 +115,56 @@
       cursor: pointer;
     }
 
-   .footer-nav {
+   .footer-nav-wrapper {
       position: fixed;
       bottom: 0;
-      left: 0;
       width: 100%;
-      background-color: #ffffff;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
-      z-index: 100;
       display: flex;
       justify-content: center;
-      padding: 0.5rem 0;
+      z-index: 100;
+      background-color: transparent;
     }
 
-  .footer-nav-inner {
-    width: 100%;
-    max-width: 420px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
+  .footer-nav {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 15px 15px 0 0;
     }
-
 
   .footer-nav button {
-     border: none;
-      background: #cd77f2;
-      color: white;
-      font-weight: bold;
-      padding: 0.6rem 1.2rem;
-      border-radius: 10px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.9rem;
-      transition: background 0.2s ease;
+    border: none;
+    background: #cd77f2;
+    color: white;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
     }
 
-    .footer-nav button:hover {
-      background: #b65de0;
+  .footer-nav button:hover {
+    background: #b65de0;
     }
+    
+    .top-back-btn {
+      display: block;
+      margin-bottom: 1rem;
+      padding: 0.4rem 0.9rem;
+      background-color: #cd77f2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      width: fit-content;
+    }
+
   </style>
 </head>
 <body>
@@ -180,6 +190,8 @@
     <!-- CATEGORY: Health & Medical -->
     <div id="health" class="category-section">
       <h2>🏥 Health & Medical</h2>
+      <button class="top-back-btn" onclick="goBack()">← Back</button>
+
 
       <label for="doctorFilter"><strong>Filter by Type of Doctor:</strong></label>
       <select id="doctorFilter" onchange="filterDoctors()">
@@ -218,6 +230,8 @@
         <!-- CATEGORY: Education -->
     <div id="education" class="category-section">
       <h2>🎓 Education</h2>
+      <button class="top-back-btn" onclick="goBack()">← Back</button>
+
       <div class="entry"><strong>Colegio Nueva Granada</strong><br>Prestigious American international school<br>📍 Calle 200, Bogotá</div>
       <div class="entry"><strong>Gimnasio Moderno</strong><br>All-boys progressive school<br>📍 Bogotá 🌐 www.gimnasiomoderno.edu.co</div>
       <div class="entry"><strong>Clermont School</strong><br>Bilingual private school, North Bogotá<br>📍 Bogotá 🌐 www.clermont.edu.co</div>
@@ -229,6 +243,8 @@
     <!-- CATEGORY: Transportation -->
     <div id="transport" class="category-section">
       <h2>🚗 Transportation</h2>
+      <button class="top-back-btn" onclick="goBack()">← Back</button>
+
       <div class="entry"><strong>Yecid Gomez</strong><br>Reliable driver (Spanish only)<br>📞 +57 312 5787275</div>
       <div class="entry"><strong>Edgar Sabogal</strong><br>Car rental and airport transport<br>📞 +57 321 2279895</div>
       <div class="entry"><strong>Juan Carlos Sarmiento</strong><br>Trusted private driver<br>📞 +57 317 3745561</div>
@@ -240,6 +256,8 @@
     <!-- CATEGORY: Home Services -->
     <div id="home" class="category-section">
       <h2>🧹 Home Services</h2>
+      <button class="top-back-btn" onclick="goBack()">← Back</button>
+
       <div class="entry"><strong>Maria Eugenia Sanchez</strong><br>Trusted nanny/housekeeper<br>📞 +57 322 8217161</div>
       <div class="entry"><strong>Referral Network</strong><br>Multiple members have shared trusted housekeepers (check group chat)</div>
       <button class="back-btn" onclick="goBack()">← Back</button>
@@ -248,6 +266,8 @@
     <!-- CATEGORY: Style & Tailoring -->
     <div id="style" class="category-section">
       <h2>👗 Style & Tailoring</h2>
+      <button class="top-back-btn" onclick="goBack()">← Back</button>
+
       <div class="entry"><strong>Lea Raymond Couturiere</strong><br>Custom French dressmaking<br>📞 +57 305 2922099</div>
       <button class="back-btn" onclick="goBack()">← Back</button>
     </div>
@@ -255,6 +275,8 @@
     <!-- CATEGORY: Pets & Vets -->
     <div id="pets" class="category-section">
       <h2>🐾 Pets & Vets</h2>
+      <button class="top-back-btn" onclick="goBack()">← Back</button>
+
       <div class="entry"><strong>Atypical Pets</strong><br>Exotic pet care – North Bogotá</div>
       <div class="entry"><strong>Laika</strong><br>Vet clinics, grooming, pet store app<br>🌐 App: Laika (Colombia)</div>
       <div class="entry"><strong>TuVet</strong><br>Mobile veterinary care<br>🌐 www.tuvet.co</div>
@@ -266,6 +288,8 @@
     <!-- CATEGORY: Real Estate -->
     <div id="realestate" class="category-section">
       <h2>🏡 Real Estate</h2>
+      <button class="top-back-btn" onclick="goBack()">← Back</button>
+
       <div class="entry"><strong>Carlos Gonzalez IMMO</strong><br>Embassy-experienced, English speaker<br>📞 +57 310 3362045</div>
       <div class="entry"><strong>Rapha Garing</strong><br>Luxury homes, speaks French/Spanish<br>📞 +57 310 2746388</div>
       <button class="back-btn" onclick="goBack()">← Back</button>
@@ -274,6 +298,8 @@
     <!-- CATEGORY: Food & Markets -->
     <div id="food" class="category-section">
       <h2>🛒 Food & Markets</h2>
+      <button class="top-back-btn" onclick="goBack()">← Back</button>
+
       <div class="entry"><strong>Carulla</strong><br>Premium grocery store, online delivery available</div>
       <div class="entry"><strong>Artisan Bakeries</strong><br>Highly recommended for sourdough, baguettes (shared in group chat)</div>
       <div class="entry"><strong>Marketplace at 93 Park</strong><br>Weekend organic markets – check timing</div>
@@ -283,6 +309,8 @@
     <!-- CATEGORY: Tech & Repairs -->
     <div id="tech" class="category-section">
       <h2>💻 Tech & Repairs</h2>
+      <button class="top-back-btn" onclick="goBack()">← Back</button>
+
       <div class="entry"><strong>Miguel</strong><br>Kids robotics, physics & coding classes<br>📞 +7 999 099-31-81</div>
       <div class="entry"><strong>Encrypt Gallery</strong><br>Fast, reliable phone repairs<br>📞 +57 316 6468081</div>
       <button class="back-btn" onclick="goBack()">← Back</button>
@@ -291,6 +319,8 @@
     <!-- CATEGORY: Kids Activities -->
     <div id="kids" class="category-section">
       <h2>🎉 Kids Activities</h2>
+      <button class="top-back-btn" onclick="goBack()">← Back</button>
+
       <div class="entry"><strong>Cinemania</strong><br>Kid-friendly weekend shows<br>📍 Carrera 14, Calle 93b</div>
       <div class="entry"><strong>Plaza Claro Cinema</strong><br>Short intermission & games inside</div>
       <div class="entry"><strong>Diversaltos Lina Arias</strong><br>Inflatable rentals for events<br>📞 +57 318 7080689</div>
@@ -302,6 +332,8 @@
     <!-- CATEGORY: Fitness & Trainers -->
     <div id="fitness" class="category-section">
       <h2>🏋️‍♀️ Fitness & Trainers</h2>
+      <button class="top-back-btn" onclick="goBack()">← Back</button>
+
       <div class="entry"><strong>Tata</strong><br>Pilates + home services<br>📧 pilatessynergy@hotmail.com<br>📞 +57 313 8282946</div>
       <div class="entry"><strong>Alberto Guerrero</strong><br>Personal trainer – at-home sessions<br>📞 +57 310 2521520</div>
       <div class="entry"><strong>Angel Hidalgo</strong><br>Kickboxing / MMA trainer<br>📞 +57 315 8543182</div>
