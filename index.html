@@ -318,29 +318,43 @@
 
   </div> <!-- Close app-wrapper -->
 
-  <script>
-    function showCategory(id) {
-      document.getElementById('mainMenu').style.display = 'none';
-      document.querySelectorAll('.category-section').forEach(section => section.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
+<script>
+  function showCategory(id) {
+    document.getElementById('mainMenu').style.display = 'none';
+    document.querySelectorAll('.category-section').forEach(section => {
+      section.classList.remove('active');
+    });
+    const target = document.getElementById(id);
+    if (target) target.classList.add('active');
+  }
 
-    function goBack() {
-      document.querySelectorAll('.category-section').forEach(section => section.classList.remove('active'));
-      document.getElementById('mainMenu').style.display = 'grid';
-    }
-    function openAdminPanel() {
-  document.getElementById('mainMenu').style.display = 'none';
-  document.querySelectorAll('.category-section').forEach(section => section.classList.remove('active'));
-  document.getElementById('admin-panel').classList.add('active');
-}
+  function goBack() {
+    document.querySelectorAll('.category-section').forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById('mainMenu').style.display = 'grid';
+  }
+</script>
 
-  </script>
 <div class="footer-nav">
   <div class="footer-nav-inner">
     <button onclick="showCategory('suggest')">💡 Suggest Listing</button>
     <button onclick="showCategory('admin-panel')">👩‍💻 Admin Contact</button>
   </div>
+</div>
+<div id="suggest" class="category-section">
+  <h2>💡 Suggest a Listing</h2>
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLSf_fX6KJCG0mbsJ7bHpJZQR4G_khKoPhn_FzB3cVs0_k-4MVQ/viewform?embedded=true" 
+    width="100%" 
+    height="2089" 
+    frameborder="0" 
+    marginheight="0" 
+    marginwidth="0" 
+    style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background: #fff;">
+    Loading…
+  </iframe>
+  <button class="back-btn" onclick="goBack()">← Back</button>
 </div>
 
 
