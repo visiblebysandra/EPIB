@@ -11,6 +11,7 @@
       margin: 0;
       padding: 0;
     }
+
     .app-wrapper {
       max-width: 420px;
       margin: 0 auto;
@@ -19,8 +20,10 @@
       align-items: stretch;
       background-color: #ffffff;
       min-height: 100vh;
+      padding-bottom: 80px;
       position: relative;
     }
+
     header {
       background: linear-gradient(to right, #f263c0, #cd77f2);
       color: white;
@@ -29,6 +32,7 @@
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
       border-radius: 0 0 20px 20px;
     }
+
     header img {
       width: 90px;
       border-radius: 50%;
@@ -36,21 +40,25 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       margin-bottom: 0.5rem;
     }
+
     header h1 {
       margin: 0.5rem 0 0.25rem;
       font-size: 1.6rem;
     }
+
     header p {
       margin: 0;
       font-size: 0.95rem;
       opacity: 0.9;
     }
+
     main {
       padding: 1rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
+
     .card {
       border-radius: 15px;
       padding: 1rem;
@@ -61,15 +69,16 @@
       font-weight: bold;
       cursor: pointer;
     }
-    .card:nth-child(1)  { background-color: #f263c0; }
-    .card:nth-child(2)  { background-color: #cd77f2; }
-    .card:nth-child(3)  { background-color: #e4e9f2; color: #333; }
-    .card:nth-child(4)  { background-color: #f2cea2; color: #333; }
-    .card:nth-child(5)  { background-color: #f2541b; }
-    .card:nth-child(6)  { background-color: #f263c0; }
-    .card:nth-child(7)  { background-color: #cd77f2; }
-    .card:nth-child(8)  { background-color: #e4e9f2; color: #333; }
-    .card:nth-child(9)  { background-color: #f2cea2; color: #333; }
+
+    .card:nth-child(1) { background-color: #f263c0; }
+    .card:nth-child(2) { background-color: #cd77f2; }
+    .card:nth-child(3) { background-color: #e4e9f2; color: #333; }
+    .card:nth-child(4) { background-color: #f2cea2; color: #333; }
+    .card:nth-child(5) { background-color: #f2541b; }
+    .card:nth-child(6) { background-color: #f263c0; }
+    .card:nth-child(7) { background-color: #cd77f2; }
+    .card:nth-child(8) { background-color: #e4e9f2; color: #333; }
+    .card:nth-child(9) { background-color: #f2cea2; color: #333; }
     .card:nth-child(10) { background-color: #f263c0; }
     .card:nth-child(11) { background-color: #cd77f2; }
 
@@ -77,9 +86,11 @@
       display: none;
       padding: 1rem;
     }
+
     .category-section.active {
       display: block;
     }
+
     .entry {
       background: #f9f9f9;
       margin: 0.5rem 0;
@@ -87,9 +98,11 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
+
     .entry strong {
       font-size: 1rem;
     }
+
     .back-btn {
       display: block;
       margin: 1rem auto;
@@ -105,21 +118,22 @@
     .footer-nav {
       position: fixed;
       bottom: 0;
+      left: 0;
       width: 100%;
       background-color: #ffffff;
       box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
       z-index: 100;
-      display: flex;
-      justify-content: center;
       padding: 0.5rem 0;
     }
+
     .footer-nav-inner {
+      max-width: 420px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      width: 100%;
-      max-width: 420px;
       padding: 0 1rem;
     }
+
     .footer-nav button {
       border: none;
       background: #cd77f2;
@@ -134,6 +148,7 @@
       font-size: 0.9rem;
       transition: background 0.2s ease;
     }
+
     .footer-nav button:hover {
       background: #b65de0;
     }
@@ -159,6 +174,7 @@
       <div class="card" onclick="showCategory('kids')">🎉<br>Kids Activities</div>
       <div class="card" onclick="showCategory('fitness')">🏋️‍♀️<br>Fitness & Trainers</div>
     </main>
+
 
     <!-- Footer Nav -->
     <div class="footer-nav">
