@@ -178,24 +178,51 @@
       box-sizing: border-box;
     }
 
-    .footer-nav button {
-      flex: 1;
-      margin: 0 0.25rem;
-      border: none;
-      background: #cd77f2;
-      color: white;
-      font-weight: bold;
-      padding: 0.6rem 0.5rem;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 0.85rem;
-      transition: background 0.2s ease;
-      white-space: nowrap;
-    }
+   .footer-nav button {
+  flex: 1;
+  margin: 0 0.25rem;
+  border: none;
+  background: #cd77f2;
+  color: white;
+  font-weight: bold;
+  padding: 0.6rem 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
 
-    .footer-nav button:hover {
-      background: #b65de0;
-    }
+.footer-nav button:hover {
+  background: #b65de0;
+}
+    /* Style for the new disclaimer section */ 
+  #disclaimer { display: none; padding: 1rem; }
+  #disclaimer.active {
+  display: block;
+}
+
+.disclaimer-box {
+  background-color: #fff8f0;
+  border: 1px solid #ffcc99;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.disclaimer-box h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #b65de0;
+}  
+    .disclaimer-note {
+  font-size: 0.8rem;
+  color: #777;
+  text-align: center;
+  margin-top: 2rem;
+}
   </style>
 </head>
 <body>
@@ -217,10 +244,18 @@
       <div class="card" onclick="showCategory('tech')">💻<br>Tech & Repairs</div>
       <div class="card" onclick="showCategory('kids')">🎉<br>Kids Activities</div>
       <div class="card" onclick="showCategory('fitness')">🏋️‍♀️<br>Fitness & Trainers</div>
+
+      <p style="font-size: 0.8rem; color: #555; text-align: center; margin-top: 0.5rem;">
+  * Listings are community-contributed and for informational use only.
+</p>
+
   </main>
     <!-- CATEGORY: Health & Medical -->
     <div id="health" class="category-section">
       <h2>🏥 Health & Medical</h2>
+      <p class="disclaimer-note" style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 1.5rem;">
+  * This list is shared by members and does not imply endorsement.
+      </p>
       <button class="top-back-btn" onclick="goBack()">← Back</button>
 
 
@@ -261,6 +296,9 @@
         <!-- CATEGORY: Education -->
     <div id="education" class="category-section">
       <h2>🎓 Education</h2>
+      <p class="disclaimer-note" style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 1.5rem;">
+  * This list is shared by members and does not imply endorsement.
+      </p>
       <button class="top-back-btn" onclick="goBack()">← Back</button>
 
       <div class="entry"><strong>Colegio Nueva Granada</strong><br>Prestigious American international school<br>📍 Calle 200, Bogotá</div>
@@ -274,6 +312,9 @@
     <!-- CATEGORY: Transportation -->
     <div id="transport" class="category-section">
       <h2>🚗 Transportation</h2>
+           <p class="disclaimer-note" style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 1.5rem;">
+  * This list is shared by members and does not imply endorsement.
+      </p>
       <button class="top-back-btn" onclick="goBack()">← Back</button>
 
       <div class="entry"><strong>Yecid Gomez</strong><br>Reliable driver (Spanish only)<br>📞 +57 312 5787275</div>
@@ -287,6 +328,9 @@
     <!-- CATEGORY: Home Services -->
     <div id="home" class="category-section">
       <h2>🧹 Home Services</h2>
+          <p class="disclaimer-note" style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 1.5rem;">
+  * This list is shared by members and does not imply endorsement.
+      </p>
       <button class="top-back-btn" onclick="goBack()">← Back</button>
 
       <div class="entry"><strong>Maria Eugenia Sanchez</strong><br>Trusted nanny/housekeeper<br>📞 +57 322 8217161</div>
@@ -297,6 +341,9 @@
     <!-- CATEGORY: Style & Tailoring -->
     <div id="style" class="category-section">
       <h2>👗 Style & Tailoring</h2>
+           <p class="disclaimer-note" style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 1.5rem;">
+  * This list is shared by members and does not imply endorsement.
+      </p>
       <button class="top-back-btn" onclick="goBack()">← Back</button>
 
       <div class="entry"><strong>Lea Raymond Couturiere</strong><br>Custom French dressmaking<br>📞 +57 305 2922099</div>
@@ -306,6 +353,9 @@
     <!-- CATEGORY: Pets & Vets -->
     <div id="pets" class="category-section">
       <h2>🐾 Pets & Vets</h2>
+          <p class="disclaimer-note" style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 1.5rem;">
+  * This list is shared by members and does not imply endorsement.
+      </p>
       <button class="top-back-btn" onclick="goBack()">← Back</button>
 
       <div class="entry"><strong>Atypical Pets</strong><br>Exotic pet care – North Bogotá</div>
@@ -319,6 +369,9 @@
     <!-- CATEGORY: Real Estate -->
     <div id="realestate" class="category-section">
       <h2>🏡 Real Estate</h2>
+           <p class="disclaimer-note" style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 1.5rem;">
+  * This list is shared by members and does not imply endorsement.
+      </p>
       <button class="top-back-btn" onclick="goBack()">← Back</button>
 
       <div class="entry"><strong>Carlos Gonzalez IMMO</strong><br>Embassy-experienced, English speaker<br>📞 +57 310 3362045</div>
@@ -329,6 +382,9 @@
     <!-- CATEGORY: Food & Markets -->
     <div id="food" class="category-section">
       <h2>🛒 Food & Markets</h2>
+           <p class="disclaimer-note" style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 1.5rem;">
+  * This list is shared by members and does not imply endorsement.
+      </p>
       <button class="top-back-btn" onclick="goBack()">← Back</button>
 
       <div class="entry"><strong>Carulla</strong><br>Premium grocery store, online delivery available</div>
@@ -340,6 +396,9 @@
     <!-- CATEGORY: Tech & Repairs -->
     <div id="tech" class="category-section">
       <h2>💻 Tech & Repairs</h2>
+           <p class="disclaimer-note" style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 1.5rem;">
+  * This list is shared by members and does not imply endorsement.
+      </p>
       <button class="top-back-btn" onclick="goBack()">← Back</button>
 
       <div class="entry"><strong>Miguel</strong><br>Kids robotics, physics & coding classes<br>📞 +7 999 099-31-81</div>
@@ -350,6 +409,9 @@
     <!-- CATEGORY: Kids Activities -->
     <div id="kids" class="category-section">
       <h2>🎉 Kids Activities</h2>
+           <p class="disclaimer-note" style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 1.5rem;">
+  * This list is shared by members and does not imply endorsement.
+      </p>
       <button class="top-back-btn" onclick="goBack()">← Back</button>
 
       <div class="entry"><strong>Cinemania</strong><br>Kid-friendly weekend shows<br>📍 Carrera 14, Calle 93b</div>
@@ -363,6 +425,9 @@
     <!-- CATEGORY: Fitness & Trainers -->
     <div id="fitness" class="category-section">
       <h2>🏋️‍♀️ Fitness & Trainers</h2>
+           <p class="disclaimer-note" style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 1.5rem;">
+  * This list is shared by members and does not imply endorsement.
+      </p>
       <button class="top-back-btn" onclick="goBack()">← Back</button>
 
       <div class="entry"><strong>Tata</strong><br>Pilates + home services<br>📧 pilatessynergy@hotmail.com<br>📞 +57 313 8282946</div>
@@ -374,6 +439,9 @@
     <!-- SUGGEST LISTING -->
     <div id="suggest" class="category-section">
       <h2>💡 Suggest a Listing</h2>
+            <p class="disclaimer-note" style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 1.5rem;">
+  * This list is shared by members and does not imply endorsement.
+      </p>
       <iframe 
         src="https://docs.google.com/forms/d/e/1FAIpQLSf_fX6KJCG0mbsJ7bHpJZQR4G_khKoPhn_FzB3cVs0_k-4MVQ/viewform?embedded=true" 
         width="100%" 
@@ -386,7 +454,16 @@
       </iframe>
       <button class="back-btn" onclick="goBack()">← Back</button>
     </div>
-
+<!-- DISCLAIMER -->
+    <div id="disclaimer" class="category-section">
+      <h2>⚠️ Disclaimer</h2>
+        <p>This directory is compiled by members of the Expat Parents in Bogotá group and is intended strictly as a community resource. It is not an endorsement of any individual or business listed herein.</p>
+        <p>The administrators and contributors of this directory are all unpaid volunteers. We do not accept responsibility or liability for any outcome resulting from the use of information or services shared in this directory.</p>
+        <p>In accordance with Colombian consumer law (Derecho de Petición / PQR), we clarify that this group does not operate as a business or registered organization offering services to the public. No formal commercial services are offered or sold via this platform.</p>
+        <p>If you have concerns about the content or functioning of this group, you may contact the admin team through the <strong>👩‍💻 Admin Contact</strong> section. Please remember that we are all volunteers managing this space in our free time.</p>
+        <p>All listings should be verified by you, and used at your own discretion.</p>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
     <!-- ADMIN PANEL -->
     <div id="admin-panel" class="category-section">
       <h2>👩‍💻 Admin Contact</h2>
@@ -398,7 +475,6 @@
       <p style="margin-top:1rem;">📧 <a href="mailto:expatparentsinbogota@gmail.com">expatparentsinbogota@gmail.com</a></p>
       <button class="back-btn" onclick="goBack()">← Back</button>
     </div>
-   
   </div> <!-- END .app-wrapper -->
 
   <!-- OUTSIDE of .app-wrapper -->
@@ -406,6 +482,7 @@
   <div class="footer-nav">
     <button onclick="showCategory('suggest')">💡 Suggest Listing</button>
     <button onclick="showCategory('admin-panel')">👩‍💻 Admin Contact</button>
+    <button onclick="showCategory('disclaimer')">⚠️ Disclaimer</button>
   </div>
 </div>
 
