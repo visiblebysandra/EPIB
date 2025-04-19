@@ -100,6 +100,30 @@
       font-size: 1rem;
       cursor: pointer;
     }
+    .bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+.bottom-nav button {
+  background-color: #cd77f2;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
   </style>
 </head>
 <body>
@@ -243,6 +267,21 @@
       <div class="entry"><strong>Arte Vibrante</strong><br>Art classes for kids – creative & bilingual<br>🌐 www.artevibrante.org</div>
       <button class="back-btn" onclick="goBack()">← Back</button>
     </div>
+<div id="admin-panel" class="category-section">
+  <h2>👩‍💻 Admin Contact</h2>
+  <p>If you have any issues with a member or the group itself, please reach out to one of our trusted admins:</p>
+
+  <div class="entry">
+    <strong>Admin Team</strong><br>
+    Hanny, Jessica, Karina, Lina, Luis, Maria José, Nico, Pascal, Sandra, and Yammit
+  </div>
+
+  <p style="margin-top:1rem;">For direct contact or support, you can also email:<br>
+    📧 <a href="mailto:sandra@visiblebysandra.com">sandra@visiblebysandra.com</a>
+  </p>
+
+  <button class="back-btn" onclick="goBack()">← Back</button>
+</div>
 
   </div> <!-- Close app-wrapper -->
 
@@ -257,7 +296,18 @@
       document.querySelectorAll('.category-section').forEach(section => section.classList.remove('active'));
       document.getElementById('mainMenu').style.display = 'grid';
     }
+    function openAdminPanel() {
+  document.getElementById('mainMenu').style.display = 'none';
+  document.querySelectorAll('.category-section').forEach(section => section.classList.remove('active'));
+  document.getElementById('admin-panel').classList.add('active');
+}
+
   </script>
+  <footer class="bottom-nav">
+  <button onclick="showCategory('submit')">📬 Suggest Listing</button>
+  <button onclick="openAdminPanel()">👩‍💻 Admin Contact</button>
+</footer>
+
 </body>
 </html>
 
