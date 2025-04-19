@@ -11,20 +11,7 @@
       margin: 0;
       padding: 0;
     }
-
-    .app-wrapper {
-      max-width: 420px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      background-color: #ffffff;
-      min-height: 100vh;
-      padding-bottom: 80px;
-      position: relative;
-    }
-
-    header {
+     header {
       background: linear-gradient(to right, #f263c0, #cd77f2);
       color: white;
       padding: 2rem 1rem 1.5rem;
@@ -115,16 +102,6 @@
       cursor: pointer;
     }
 
-   .footer-nav-wrapper {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      z-index: 100;
-      background-color: transparent;
-    }
-
   .footer-nav-wrapper {
   position: fixed;
   bottom: 0;
@@ -179,6 +156,45 @@
       cursor: pointer;
       width: fit-content;
     }
+    
+.admin-bar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-bottom: 1px solid #eee;
+}
+
+.admin-bar {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+}
+
+.admin-bar button {
+  flex: 1;
+  margin: 0 0.25rem;
+  border: none;
+  background: #cd77f2;
+  color: white;
+  font-weight: bold;
+  padding: 0.6rem 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.admin-bar button:hover {
+  background: #b65de0;
+}
 
   </style>
 </head>
@@ -201,6 +217,14 @@
       <div class="card" onclick="showCategory('tech')">💻<br>Tech & Repairs</div>
       <div class="card" onclick="showCategory('kids')">🎉<br>Kids Activities</div>
       <div class="card" onclick="showCategory('fitness')">🏋️‍♀️<br>Fitness & Trainers</div>
+
+      <div class="admin-bar-wrapper">
+        <div class="admin-bar">
+          <button onclick="showCategory('suggest')">💡 Suggest Listing</button>
+          <button onclick="showCategory('admin-panel')">👩‍💻 Admin Contact</button>
+        </div>
+      </div>
+
     </main>
     <!-- CATEGORY: Health & Medical -->
     <div id="health" class="category-section">
@@ -382,15 +406,7 @@
       <p style="margin-top:1rem;">📧 <a href="mailto:expatparentsinbogota@gmail.com">expatparentsinbogota@gmail.com</a></p>
       <button class="back-btn" onclick="goBack()">← Back</button>
     </div>
-
-    <!-- FOOTER NAV -->
-    <div class="footer-nav">
-      <div class="footer-nav-inner">
-        <button onclick="showCategory('suggest')">💡 Suggest Listing</button>
-        <button onclick="showCategory('admin-panel')">👩‍💻 Admin Contact</button>
-      </div>
-    </div>
-
+   
   </div> <!-- END .app-wrapper -->
 
   <!-- SCRIPT -->
