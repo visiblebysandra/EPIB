@@ -19,6 +19,7 @@
       align-items: stretch;
       background-color: #ffffff;
       min-height: 100vh;
+      position: relative;
     }
     header {
       background: linear-gradient(to right, #f263c0, #cd77f2);
@@ -100,6 +101,7 @@
       font-size: 1rem;
       cursor: pointer;
     }
+
     .footer-nav {
       position: fixed;
       bottom: 0;
@@ -137,7 +139,6 @@
     }
   </style>
 </head>
-
 <body>
   <div class="app-wrapper">
     <header>
@@ -145,7 +146,6 @@
       <h1>Expat Parents in Bogotá</h1>
       <p>Tap a category to explore resources</p>
     </header>
-
     <main id="mainMenu">
       <div class="card" onclick="showCategory('health')">🏥<br>Health & Medical</div>
       <div class="card" onclick="showCategory('education')">🎓<br>Education</div>
@@ -160,9 +160,7 @@
       <div class="card" onclick="showCategory('fitness')">🏋️‍♀️<br>Fitness & Trainers</div>
     </main>
 
-    <!-- Category Sections (continued below) -->
-
-    <!-- Footer Nav (Add this outside app-wrapper) -->
+    <!-- Footer Nav -->
     <div class="footer-nav">
       <div class="footer-nav-inner">
         <button onclick="showCategory('suggest')">💡 Suggest Listing</button>
@@ -183,6 +181,210 @@
       document.querySelectorAll('.category-section').forEach(section => section.classList.remove('active'));
       document.getElementById('mainMenu').style.display = 'grid';
     }
+      <!-- CATEGORY SECTIONS -->
+
+    <!-- Health & Medical -->
+    <div id="health" class="category-section">
+      <h2>🏥 Health & Medical</h2>
+
+      <label for="doctorFilter"><strong>Filter by Type of Doctor:</strong></label>
+      <select id="doctorFilter" onchange="filterDoctors()">
+        <option value="all">All</option>
+        <option value="pediatrician">Pediatrician</option>
+        <option value="dentist">Dentist</option>
+        <option value="dermatologist">Dermatologist</option>
+        <option value="ent">ENT</option>
+        <option value="general">General Doctor</option>
+        <option value="homecare">Home Care</option>
+        <option value="endocrinologist">Endocrinologist</option>
+        <option value="pelvic">Pelvic Specialist</option>
+      </select>
+
+      <div class="entry pediatrician"><strong>Dr. Bernardo Huertas</strong><br>Pediatrician trusted by expat families<br>📍 Bogotá<br>📞 +57 310 2288934</div>
+      <div class="entry dentist"><strong>Mamuelas Kids</strong><br>Pediatric dentist, very friendly, some English<br>📍 Bogotá<br>📞 +57 322 7672488</div>
+      <div class="entry dermatologist"><strong>Dra. Johana Rojas</strong><br>Pediatric dermatologist, recommended locally<br>📍 Bogotá<br>📞 +57 310 2782941</div>
+      <div class="entry dermatologist"><strong>Dra. Vanessa Jimenez</strong><br>Dermatologist recommended by expats<br>📍 Bogotá<br>📞 +57 300 2028982</div>
+      <div class="entry homecare"><strong>ICare Bogotá</strong><br>Pediatric home visits, English-speaking<br>📍 Citywide<br>📞 +57 310 5316996</div>
+      <div class="entry dermatologist"><strong>Dra. Viviana Perico</strong><br>Cosmetic dermatologist (94 & 11th)<br>📍 Bogotá<br>📞 +57 314 8811993</div>
+      <div class="entry dermatologist"><strong>Vanessa Gonzalez</strong><br>Dermatologist shared by group member<br>📍 Bogotá<br>📞 +57 300 7387730</div>
+      <div class="entry dentist"><strong>Consultorio Dental Bogotá</strong><br>English-speaking dentist in Chapinero<br>📍 Chapinero<br>📞 (601) 2130290</div>
+      <div class="entry dermatologist"><strong>Dra. Ana Ma Salazar</strong><br>Dermatologist for kids in Cedritos<br>📍 Cedritos<br>📞 +57 320 4314752</div>
+      <div class="entry homecare"><strong>Pediahome</strong><br>Pediatric home care (evenings)<br>📍 Bogotá<br>📞 +57 320 3122725</div>
+      <div class="entry endocrinologist"><strong>Dr. Juan José Duque Ramírez</strong><br>Endocrinologist & Internist (Doctoralia)<br>📍 Bogotá<br>🔗 <a href="https://www.doctoralia.co/juan-jose-duque-ramirez/endocrinologo-internista/bogota" target="_blank">View Profile</a></div>
+      <div class="entry general"><strong>Dr. Sergio Prieto</strong><br>General doctor for adults, house calls, fluent English<br>📍 Bogotá<br>📞 +57 321 4083791</div>
+      <div class="entry ent"><strong>Dr. Luis Jorge Mejía</strong><br>Pediatric ENT (Clínica Country)<br>📍 Bogotá<br>📞 +57 310 6746577</div>
+      <div class="entry ent"><strong>Dra. Diana Quijano</strong><br>ENT specialist (Clínica Santa Fe)<br>📍 Bogotá<br>📞 +57 310 8734966 / +57 1 6200474</div>
+      <div class="entry pelvic"><strong>Bibiana Kine ELISA</strong><br>Pelvic & diastasis recti specialist<br>📍 Bogotá<br>📞 +57 312 5877076</div>
+      <div class="entry pelvic"><strong>Dra. Marcela Lomanto Cardona</strong><br>Pelvic floor therapy, tecar treatment<br>📍 Bogotá<br>🌐 <a href="https://www.instagram.com/doctoramarcelalomantoo/" target="_blank">Instagram</a><br>📞 +57 311 4634232</div>
+
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <!-- Education -->
+    <div id="education" class="category-section">
+      <h2>🎓 Education</h2>
+      <div class="entry"><strong>Colegio Nueva Granada</strong><br>Prestigious American international school<br>📍 Calle 200, Bogotá</div>
+      <div class="entry"><strong>Gimnasio Moderno</strong><br>Traditional and progressive all-boys school<br>📍 Bogotá 🌐 www.gimnasiomoderno.edu.co</div>
+      <div class="entry"><strong>Clermont School</strong><br>Bilingual private school, north Bogotá<br>📍 Bogotá 🌐 www.clermont.edu.co</div>
+      <div class="entry"><strong>Fundación Colegio Emilio Valenzuela</strong><br>Catholic co-ed private school with strong reputation<br>📍 Bogotá</div>
+      <div class="entry"><strong>Liceo Francés Louis Pasteur</strong><br>French curriculum, highly rated<br>📍 Bogotá 🌐 www.lf.edu.co</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <!-- Transportation -->
+    <div id="transport" class="category-section">
+      <h2>🚗 Transportation</h2>
+      <div class="entry"><strong>Yecid Gomez</strong><br>Reliable driver, Spanish only<br>📞 +57 312 5787275</div>
+      <div class="entry"><strong>Edgar Sabogal</strong><br>Car rental and airport drop-off<br>📞 +57 321 2279895</div>
+      <div class="entry"><strong>Juan Carlos Sarmiento</strong><br>Driver used by Pilar C. – reliable<br>📞 +57 317 3745561</div>
+      <div class="entry"><strong>Aldo Transporte</strong><br>Private transport to Málaga/Boyacá<br>📞 +57 304 2474406</div>
+      <div class="entry"><strong>Juan (Uber)</strong><br>Well-known trusted driver<br>📞 +57 311 4968358</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <!-- Home Services -->
+    <div id="home" class="category-section">
+      <h2>🧹 Home Services</h2>
+      <div class="entry"><strong>Maria Eugenia Sanchez</strong><br>Trusted maid for childcare + cleaning<br>📞 +57 322 8217161</div>
+      <div class="entry"><strong>Referral Network</strong><br>Many families posted housekeeper/caregiver recommendations (see chat)</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <!-- Style & Tailoring -->
+    <div id="style" class="category-section">
+      <h2>👗 Style & Tailoring</h2>
+      <div class="entry"><strong>Lea Raymond Couturiere</strong><br>Custom dressmaking, French-speaking<br>📞 +57 305 2922099</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+      <!-- Pets & Vets -->
+    <div id="pets" class="category-section">
+      <h2>🐾 Pets & Vets</h2>
+      <div class="entry"><strong>Atypical Pets</strong><br>Vet for exotic pets (North Bogotá)</div>
+      <div class="entry"><strong>Laika</strong><br>Vet clinics, grooming & pet store chain<br>🌐 App: Laika (Colombia)</div>
+      <div class="entry"><strong>TuVet</strong><br>Mobile veterinary care<br>🌐 www.tuvet.co</div>
+      <div class="entry"><strong>Centro Médico Veterinario Cedritos</strong><br>Full-service hospital<br>📞 +57 1 625 5453</div>
+      <div class="entry"><strong>Grooming Pelitos</strong><br>Pet grooming recommended by families</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <!-- Real Estate -->
+    <div id="realestate" class="category-section">
+      <h2>🏡 Real Estate</h2>
+      <div class="entry"><strong>Carlos Gonzalez IMMO</strong><br>Works with embassies and expats<br>📞 +57 310 3362045</div>
+      <div class="entry"><strong>Rapha Garing</strong><br>Luxury properties, speaks French & Spanish<br>📞 +57 310 2746388</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <!-- Food & Markets -->
+    <div id="food" class="category-section">
+      <h2>🛒 Food & Markets</h2>
+      <div class="entry"><strong>Carulla</strong><br>Upscale grocery chain (online delivery available)</div>
+      <div class="entry"><strong>Expat Favorite Bakeries</strong><br>Chat recommends several artisan bakeries for sourdough, baguettes</div>
+      <div class="entry"><strong>Marketplace at 93 Park</strong><br>Weekend organic market (check timing)</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <!-- Tech & Repairs -->
+    <div id="tech" class="category-section">
+      <h2>💻 Tech & Repairs</h2>
+      <div class="entry"><strong>Miguel</strong><br>Robotics, programming, physics lessons for kids<br>📞 +7 999 099-31-81</div>
+      <div class="entry"><strong>Encrypt Gallery</strong><br>Fast and reliable phone repair<br>📞 +57 316 6468081</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <!-- Kids Activities -->
+    <div id="kids" class="category-section">
+      <h2>🎉 Kids Activities</h2>
+      <div class="entry"><strong>Cinemania</strong><br>Weekend kid-friendly cinema with snacks<br>📍 Carrera 14, Calle 93b</div>
+      <div class="entry"><strong>Plaza Claro Cinema</strong><br>Indoor games + short intermissions</div>
+      <div class="entry"><strong>Diversaltos Lina Arias</strong><br>Inflatables for birthdays & events<br>📞 +57 318 7080689</div>
+      <div class="entry"><strong>Ukelele Fiestas Bogotá</strong><br>Creative party entertainment<br>📞 +57 313 3333635</div>
+      <div class="entry"><strong>Arte Vibrante</strong><br>Art classes for kids – creative & bilingual<br>🌐 www.artevibrante.org</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <!-- Fitness & Trainers -->
+    <div id="fitness" class="category-section">
+      <h2>🏋️‍♀️ Fitness & Trainers</h2>
+      <div class="entry"><strong>Tata</strong><br>Pilates studio & home services<br>📧 pilatessynergy@hotmail.com<br>📞 +57 313 8282946</div>
+      <div class="entry"><strong>Alberto Guerrero</strong><br>Personal trainer, comes to your home<br>📞 +57 310 2521520</div>
+      <div class="entry"><strong>Angel Hidalgo</strong><br>Kickboxing / MMA fitness trainer<br>📞 +57 315 8543182</div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <!-- Admin Contact -->
+    <div id="admin-panel" class="category-section">
+      <h2>👩‍💻 Admin Contact</h2>
+      <p>If you have any issues with a member or the group itself, please reach out to one of our trusted admins:</p>
+      <div class="entry">
+        <strong>Admin Team</strong><br>
+        Hanny, Jessica, Karina, Lina, Luis, Maria José, Nico, Pascal, Sandra, and Yammit
+      </div>
+      <p style="margin-top:1rem;">For direct contact or support, you can also email:<br>
+        📧 <a href="mailto:expatparentsinbogota@gmail.com">expatparentsinbogota@gmail.com</a>
+      </p>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <!-- Suggest a Listing -->
+    <div id="suggest" class="category-section">
+      <h2>💡 Suggest a Listing</h2>
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSf_fX6KJCG0mbsJ7bHpJZQR4G_khKoPhn_FzB3cVs0_k-4MVQ/viewform?embedded=true" 
+        width="100%" 
+        height="1800" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0" 
+        style="border-radius: 10px; background: #fff;">
+        Loading…
+      </iframe>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+  </div> <!-- Close .app-wrapper -->
+
+  <!-- Footer Nav -->
+  <div class="footer-nav">
+    <div class="footer-nav-inner">
+      <button onclick="showCategory('suggest')">💡 Suggest Listing</button>
+      <button onclick="showCategory('admin-panel')">👩‍💻 Admin Contact</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function showCategory(id) {
+      document.getElementById('mainMenu').style.display = 'none';
+      document.querySelectorAll('.category-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      const target = document.getElementById(id);
+      if (target) target.classList.add('active');
+    }
+
+    function goBack() {
+      document.querySelectorAll('.category-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById('mainMenu').style.display = 'grid';
+    }
+
+    function filterDoctors() {
+      const selected = document.getElementById('doctorFilter').value;
+      const entries = document.querySelectorAll('#health .entry');
+      entries.forEach(entry => {
+        if (selected === 'all') {
+          entry.style.display = 'block';
+        } else {
+          entry.style.display = entry.classList.contains(selected) ? 'block' : 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
+
   </script>
 </body>
 </html>
