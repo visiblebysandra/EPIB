@@ -7,3 +7,5 @@ This is a lightweight, mobile-friendly directory app for expat families in Bogot
 🛠️ Please submit issues or suggestions via form inside the app, not GitHub
 
 🛑 DISCLAIMER: This project is not affiliated with any official organization. All listings are community-shared and provided for informational purposes only.
+
+
