@@ -123,6 +123,7 @@
     .card:nth-child(11) { background-color: #cd77f2; }
     .card:nth-child(12) { background-color: #e4e9f2; color: #333; }
     .card:nth-child(13) { background-color: #f2cea2; color: #333; }
+    .card:nth-child(14) { background-color: #f263c0; }
     
     .category-section {
       display: none;
@@ -270,9 +271,9 @@
       <div class="card" onclick="showCategory('tech')">💻<br>Tech & Repairs</div>
       <div class="card" onclick="showCategory('kids')">🎉<br>Kids Activities</div>
       <div class="card" onclick="showCategory('fitness')">🏋️‍♀️<br>Fitness & Trainers</div>
-      <div class="card" onclick="showCategory('spa')">💆<br>Spa & Wellness</div>
-      <div class="card" onclick="showCategory('travel')">💆<br>Travel</div>
-
+      <div class="card" onclick="showCategory('spa')"><br>Spa & Wellness</div>
+      <div class="card" onclick="showCategory('travel')"><br>Travel</div>
+      <div class="card" onclick="showCategory('Hair Salons')">✂️<br>Hair Salons</div>
 
   </main>
     <!-- CATEGORY: Health & Medical -->
@@ -421,6 +422,8 @@
 
       <div class="entry"><strong>Maria Eugenia Sanchez</strong><br>Trusted nanny/housekeeper<br>📞 +57 322 8217161</div>
       <div class="entry nanny"><strong>Sandra Moreno – Nana Sofi (Rox)</strong> – Trusted nanny contact shared by parents 📍 Bogotá 📞 +57 310 3343986</div>
+      <div class="entry childcare"><strong>Kanguritos</strong> – Professional nanny agency based in Bogotá. 🌐 <a href="https://kanguritos.co/#cotiza" target="_blank">Website</a></div>
+
       
       <button class="back-btn" onclick="goBack()">← Back</button>
       <div class="spacer" style="height: 80px;"></div>
@@ -553,8 +556,21 @@
       <button class="back-btn" onclick="goBack()">← Back</button>
       <div class="spacer" style="height: 80px;"></div>
 
-    </div>
+    </div
+    <!-- CATEGORY: Hair Salons -->
+    <div id="spa" class="category-section">
+    <h2>✂️  Hair Salons</h2>
+      <p class="disclaimer-note" style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 1.5rem;">* This list is shared by members and does not imply endorsement.</p>
+      <button class="top-back-btn" onclick="goBack()">← Back</button>
+  
+      <div class="entry salon"><strong>Shine Beauty Lab</strong> – Salon opened by former Ponto hairstylists, specializing in curly hair. 📍 Bogotá 🌐 <a href="https://www.instagram.com/shinebeautylab__?igsh=em41aXgyN2t5YWFx" target="_blank">Instagram</a></div>
+      <div class="entry salon"><strong>Jean Fernandez Citas</strong> – Specialist in afro and curly hair care. 📍 Bogotá 📞 +57 317 3282079 🌐 <a href="https://www.instagram.com/jeanfernandez15?igsh=MWc3enFnbWxjdW1sZQ==" target="_blank">Instagram</a></div>
+      <div class="entry salon"><strong>Rizos y Crespos</strong> – Curly hair salon for adults and kids (must have curly hair). 📍 Carrera 14 #79-47, Bogotá</div>
 
+      <button class="back-btn" onclick="goBack()">← Back</button>
+      <div class="spacer" style="height: 80px;"></div>
+    </div>
+    
      <!-- CATEGORY: Travel & Destinations -->
     <div id="travel" class="category-section">
       <h2>🏥 Travel & Destinations </h2>
